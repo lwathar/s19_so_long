@@ -6,7 +6,7 @@
 /*   By: lowathar <lowathar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 11:01:22 by lowathar          #+#    #+#             */
-/*   Updated: 2023/03/27 12:01:10 by lowathar         ###   ########.fr       */
+/*   Updated: 2023/03/28 11:52:27 by lowathar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,6 @@ void	ft_player_move(t_game *game, int new_y, int new_x, int p_sprite)
 int	ft_lose(t_game *game)
 {
 	ft_printf(CYAN"\n			Movements: %d\n"RESET, ++game->mvt);
-	ft_free_memory(game);
 	ft_printf(RED"\n\
 █████████████████████████████████████████████████████████████████████\n\
 ██                                                                 ██\n\
@@ -68,6 +67,6 @@ int	ft_lose(t_game *game)
 ██                                                                 ██\n\
 █████████████████████████████████████████████████████████████████████\n\n\
 "RESET);
-system("leaks so_long");
+	ft_free_memory(game);
 	exit (EXIT_FAILURE);
 }

@@ -6,7 +6,7 @@
 /*   By: lowathar <lowathar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 14:14:42 by lowathar          #+#    #+#             */
-/*   Updated: 2023/03/20 15:55:42 by lowathar         ###   ########.fr       */
+/*   Updated: 2023/03/28 12:09:08 by lowathar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,8 @@ void	ft_floodfill(t_map *backupdata, int x, int y)
 void	ft_check_path(t_game *game)
 {
 	t_map	*backupdata;
-	
+	int		i;
+
 	backupdata = malloc(sizeof(t_map));
 	backupdata->coins = 0;
 	backupdata->exit = 0;
@@ -53,5 +54,9 @@ void	ft_check_path(t_game *game)
 		free(backupdata);
 		ft_error_msg("Error path. The Exit is not accessible!", game);
 	}
+	i = 0;
+	while (i < game->map.rows)
+		free((backupdata->full[i++]));
+	free(backupdata->full);
 	free(backupdata);
 }

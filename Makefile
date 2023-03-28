@@ -6,7 +6,7 @@
 #    By: lowathar <lowathar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/25 13:37:29 by lowathar          #+#    #+#              #
-#    Updated: 2023/03/27 12:01:52 by lowathar         ###   ########.fr        #
+#    Updated: 2023/03/28 13:08:24 by lowathar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -67,7 +67,7 @@ ${NAME}:    ${OBJS}
 		@ $(MAKE) -C ./mlx all >/dev/null 2>&1
 		@ cp ./mlx/libmlx.a .
 		@${CC} ${CFLAGS} ${OBJS} ${MLX} ./libft/libft.a -o ${NAME}
-		@echo "$(GREEN)$(NAME) created[0m ✔"
+		@echo "$(GREEN)$(NAME) created ✔"
 
 all:    ${NAME}
 
@@ -91,6 +91,6 @@ bonus:		${BOBJS}
 		@ $(MAKE) -C ./mlx all >/dev/null 2>&1
 		@ cp ./mlx/libmlx.a .
 		@${CC} ${CFLAGS} ${BOBJS} ${MLX} ./libft/libft.a -o ${NAME}
-		@echo "$(GREEN)$(NAME) created[0m ✔"
+		@echo "$(GREEN)$(NAME) created ✔"
 
 .PHONY: all clean fclean re

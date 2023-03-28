@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa_base.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lwathar <lwathar@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lowathar <lowathar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/11 12:23:36 by lwathar           #+#    #+#             */
-/*   Updated: 2021/03/11 12:45:30 by lwathar          ###   ########.fr       */
+/*   Updated: 2023/03/28 13:04:19 by lowathar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_sizebase(unsigned long long nbr, int b_size)
+int	ft_sizebase(unsigned long long nbr, int b_size)
 {
 	int		i;
 
@@ -33,7 +33,8 @@ char	*ft_itoa_base(unsigned long long n, char *base, int b_size)
 	int		size;
 
 	size = ft_sizebase(n, b_size);
-	if (!(str = (char*)malloc(sizeof(char) * (size + 1))))
+	str = (char *)malloc(sizeof(char) * (size + 1));
+	if (!str)
 		return (NULL);
 	str[size] = '\0';
 	while (--size >= 0)

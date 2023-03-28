@@ -6,7 +6,7 @@
 /*   By: lowathar <lowathar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 10:53:47 by lowathar          #+#    #+#             */
-/*   Updated: 2023/03/21 11:49:22 by lowathar         ###   ########.fr       */
+/*   Updated: 2023/03/28 12:10:04 by lowathar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,6 @@
 # define RIGHT				3
 # define BACK				4
 
-
 typedef enum e_bool
 {
 	false,
@@ -67,12 +66,12 @@ typedef enum e_bool
 
 typedef struct s_pos
 {
-	int x;
-	int y;
+	int		x;
+	int		y;
 }		t_pos;
 
 typedef struct s_image
-{ 
+{
 	void	*xpm_ptr;
 	int		x;
 	int		y;
@@ -106,7 +105,7 @@ typedef struct s_game
 	t_image		player_left;
 	t_image		player_right;
 	t_image		player_back;
-	
+
 }				t_game;
 
 // check_cmd.c

@@ -6,7 +6,7 @@
 /*   By: lowathar <lowathar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 11:19:40 by lowathar          #+#    #+#             */
-/*   Updated: 2023/03/20 15:57:41 by lowathar         ###   ########.fr       */
+/*   Updated: 2023/03/28 13:07:34 by lowathar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,11 +49,8 @@ int	ft_error_msg(char *message, t_game *game)
 
 void	ft_free_memory(t_game *game)
 {
-	ft_destroy_images(game);
-	ft_free_map(game);
 	mlx_destroy_window(game->mlx, game->win);
 	free(game->mlx);
-	free(game);
 }
 
 void	ft_destroy_images(t_game *game)

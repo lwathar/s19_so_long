@@ -5,13 +5,13 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: lowathar <lowathar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/13 10:53:47 by lowathar          #+#    #+#             */
-/*   Updated: 2023/03/27 11:26:23 by lowathar         ###   ########.fr       */
+/*   Created: 2023/03/28 12:11:14 by lowathar          #+#    #+#             */
+/*   Updated: 2023/03/28 12:13:51 by lowathar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SO_LONG_H
-# define SO_LONG_H
+#ifndef SO_LONG_BONUS_H
+# define SO_LONG_BONUS_H
 # include <mlx.h>
 # include <stdlib.h>
 # include <stdio.h>
@@ -60,7 +60,6 @@
 # define RIGHT				3
 # define BACK				4
 
-
 typedef enum e_bool
 {
 	false,
@@ -69,12 +68,12 @@ typedef enum e_bool
 
 typedef struct s_pos
 {
-	int x;
-	int y;
+	int		x;
+	int		y;
 }		t_pos;
 
 typedef struct s_image
-{ 
+{
 	void	*xpm_ptr;
 	int		x;
 	int		y;
@@ -109,7 +108,7 @@ typedef struct s_game
 	t_image		player_right;
 	t_image		player_back;
 	t_image		boo;
-	
+
 }				t_game;
 
 // check_cmd.c

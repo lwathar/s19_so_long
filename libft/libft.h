@@ -6,7 +6,7 @@
 /*   By: lowathar <lowathar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 16:57:52 by lwathar           #+#    #+#             */
-/*   Updated: 2023/03/14 14:27:29 by lowathar         ###   ########.fr       */
+/*   Updated: 2023/03/28 13:05:33 by lowathar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,28 +84,34 @@ typedef struct s_struct
 	char	convert;
 }		t_struct;
 
-int		ft_printf(const char *format, ...);
-int		ft_print(const char *format, va_list *ap, t_struct *tab);
-int		ft_get_convert(t_struct *tab, const char *str, int i);
-int		ft_print_with_convert(t_struct *tab, va_list *ap);
-void	ft_putchar(char c, t_struct *tab);
+int					ft_printf(const char *format, ...);
+int					ft_print(const char *format, va_list *ap, t_struct *tab);
+int					ft_get_convert(t_struct *tab, const char *str, int i);
+int					ft_print_with_convert(t_struct *tab, va_list *ap);
+void				ft_putchar(char c, t_struct *tab);
 
-void	ft_print_c(t_struct *tab, va_list *ap);
+void				ft_print_c(t_struct *tab, va_list *ap);
 
-int		ft_print_s(t_struct *tab, va_list *ap);
+int					ft_print_s(t_struct *tab, va_list *ap);
 
-int		ft_print_p(t_struct *tab, va_list *ap);
+int					ft_print_p(t_struct *tab, va_list *ap);
 
-int		ft_print_i(t_struct *tab, va_list *ap);
+int					ft_print_i(t_struct *tab, va_list *ap);
 
-int		ft_print_u(t_struct *tab, va_list *ap);
+int					ft_print_u(t_struct *tab, va_list *ap);
 
-int		ft_print_x(t_struct *tab, va_list *ap);
+int					ft_print_x(t_struct *tab, va_list *ap);
 
+// ft_get_next_line
 
-char	*get_next_line(int fd);
-char	*ft_strchr_gnl(char *str);
-size_t	ft_strlen_gnl(char *s);
-char 	*ft_strjoin_gnl(char *lstr, char *buf);
+char				*get_next_line(int fd);
+char				*ft_read_file(int fd, char *lstr);
+char				*ft_getline(char *lstr);
+char				*ft_next(char *lstr);
+char				*ft_next2(char *lstr, char *str, int i);
+char				*ft_strchr_gnl(char *str);
+size_t				ft_strlen_gnl(char *s);
+char				*ft_strjoin_gnl(char *lstr, char *buf);
+char				*ft_strjoin_gnl_2(char *lstr, char *buf, char *str);
 
 #endif

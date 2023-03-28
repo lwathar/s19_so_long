@@ -6,7 +6,7 @@
 /*   By: lowathar <lowathar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 11:19:40 by lowathar          #+#    #+#             */
-/*   Updated: 2023/03/24 12:01:14 by lowathar         ###   ########.fr       */
+/*   Updated: 2023/03/28 11:51:57 by lowathar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ int	ft_you_win(t_game *game)
 ██                                                              ██\n\
 ██████████████████████████████████████████████████████████████████\n\n\
 "RESET);
-	system("leaks so_long");
 	exit (EXIT_FAILURE);
 }
 
@@ -36,7 +35,6 @@ int	ft_close_game(t_game *game)
 	ft_printf(CYAN"Movements: %d\n"RESET, game->mvt);
 	ft_free_memory(game);
 	ft_printf(GREY"CLOSED\n"RESET);
-	system("leaks so_long");
 	exit (EXIT_FAILURE);
 }
 
@@ -51,11 +49,8 @@ int	ft_error_msg(char *message, t_game *game)
 
 void	ft_free_memory(t_game *game)
 {
-	ft_destroy_images(game);
-	ft_free_map(game);
 	mlx_destroy_window(game->mlx, game->win);
 	free(game->mlx);
-	free(game);
 }
 
 void	ft_destroy_images(t_game *game)
@@ -69,4 +64,5 @@ void	ft_destroy_images(t_game *game)
 	mlx_destroy_image(game->mlx, game->player_back.xpm_ptr);
 	mlx_destroy_image(game->mlx, game->closed_exit.xpm_ptr);
 	mlx_destroy_image(game->mlx, game->open_exit.xpm_ptr);
+	mlx_destroy_image(game->mlx, game->boo.xpm_ptr);
 }

@@ -6,7 +6,7 @@
 /*   By: lowathar <lowathar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 14:14:42 by lowathar          #+#    #+#             */
-/*   Updated: 2023/03/24 13:22:30 by lowathar         ###   ########.fr       */
+/*   Updated: 2023/03/27 15:46:37 by lowathar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void	ft_check_path(t_game *game)
 {
 	t_map	*backupdata;
 	int		i;
-	
+
 	backupdata = malloc(sizeof(t_map));
 	backupdata->coins = 0;
 	backupdata->exit = 0;
